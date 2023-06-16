@@ -1,0 +1,248 @@
+/* GLOBAL */
+
+html{
+    font-family:var(--primär, --sekundär, --fallback);
+    background-color: var(--Cream);
+}
+
+p{
+    font-size: 14px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* === GENERELLES === */
+
+
+
+/* === FARBEN === */
+
+:root{
+    /*Primary*/
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Font */
+    --primär:'Montserrat';
+    --sekundär:'Fraunces';
+    --fallback:'sans-serif';
+    
+}
+
+
+
+/* === PRODUKT-VORSCHAU DESKTOP === */
+
+#produkt-vorschau{
+    display:flex;
+    justify-content: center;
+    margin: 4rem 0 8rem 0;
+}
+
+#desktop-produkt{
+    display:flex;
+}
+
+#desktop-produkt img{
+    width:400px;
+    max-width: 50%;
+    height: auto;
+    border-radius: 20px 0 0 20px;
+}
+
+#desktop-produkt  > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:var(--White);
+   max-width: 400px;
+    padding:1rem 2rem 0 2rem;
+    border-radius: 0 20px 20px 0;
+}
+
+#desktop-produkt div > h1{
+    font-size:2rem;
+}
+
+#desktop-produkt p:first-of-type{
+    font-family: var(--primär,--sekundär,--fallback);
+    font-size: 1.25rem;
+    color: var(--Dark-grayish-blue);
+    margin-bottom: .5rem;
+}
+
+#desktop-produkt div > p:nth-of-type(2){
+    font-size: 1.25rem;
+    margin-top:2rem;
+}
+
+@media(max-width:820px){
+    #desktop-produkt{
+        display:none;
+    }
+}
+
+/* === PRODUKT-VORSCHAU MOBIL === */
+
+#mobile-produkt{
+    display:none;
+    width:90%;
+    margin: 0 auto;
+}
+
+#mobile-produkt  > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    background:var(--White);
+    padding:1rem 2rem 0 2rem;
+    border-radius: 0 0 20px 20px;
+}
+
+#mobile-produkt div > h1{
+    font-size:2rem;
+}
+
+#mobile-produkt p:first-of-type{
+    font-family: var(--primär,--sekundär,--fallback);
+    font-size: 1.25rem;
+    color: var(--Dark-grayish-blue);
+    margin-bottom: .5rem;
+}
+
+#mobile-produkt div > p:nth-of-type(2){
+    font-size: 1.25rem;
+    margin-top:2rem;
+}
+
+#mobile-produkt img{
+    border-radius: 20px 20px 0 0;
+}
+
+@media(max-width:820px){
+    #mobile-produkt{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:402px){
+    #mobile-produkt div{
+        padding:.5rem 1rem 0 1rem;
+    }
+
+    #mobile-produkt div h1{
+        font-size: 1.5rem;
+    }
+
+    #mobile-produkt div > p:nth-of-type(2){
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:350px){
+    #mobile-produkt{
+        width:100%;
+    }
+
+    #mobile-produkt div{
+        padding: .25rem .5rem 0 .5rem;
+    }
+}
+
+/* === EINKAUFEN-BEREICH === */
+
+#einkaufen {
+    margin-bottom: 1.5rem;
+}
+
+.flexbox-container #einkaufen p{
+    font-family: var(--sekundär);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--Dark-cyan);
+}
+
+.flexbox-container #einkaufen span{
+    font-family: var(--primär);
+    font-size: 1.25rem;
+    font-weight:normal;
+    color: var(--Dark-grayish-blue);
+    margin-left: 2rem;
+    text-decoration: line-through;
+
+
+
+    
+}
+
+
+#einkaufen a{
+    /* ohne block kann man nicht stylen */
+    display:block;
+    text-decoration: none;
+    text-align: center;
+    width:100%;
+    padding: 1rem;
+    margin:0 auto;
+    background:var(--Dark-cyan);
+    color: var(--White);
+    border-radius: 10px;
+    /* Damit der Text nicht umbricht */
+    min-width: 282.5px;
+}
+
+#einkaufen a svg{
+    margin-right: 1rem;
+}
+
+#einkaufen a:hover{
+    background: var(--Very-dark-blue);
+}
+
+
+@media(max-width:402px){
+    #mobile-produkt #einkaufen{
+        margin: 0 auto 1rem auto;
+    }
+
+    #mobile-produkt #einkaufen a{
+        font-size: .8rem;
+    }
+}
+
+@media(max-width:350px){
+    #mobile-produkt #einkaufen{
+        margin: 0 auto 1rem auto;
+    }
+
+    #mobile-produkt #einkaufen a{
+        padding: .5rem;
+        overflow: hidden;
+    }
+
+    #mobile-produkt #einkaufen a svg{
+        margin-right: .5rem;
+    }
+}
+
+
+/* === ATRIBUTION === */
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%);
+}
